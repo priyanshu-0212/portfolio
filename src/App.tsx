@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import AnimatedCursor from './components/AnimatedCursor';
+import { handleNavClick } from './utils/smoothScroll';
 
 function App() {
   return (
     <div className="App min-h-screen bg-gradient-primary">
+      <AnimatedCursor />
       <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="container-custom">
           <nav className="flex items-center justify-between py-4">
@@ -11,10 +14,10 @@ function App() {
               Portfolio
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-              <a href="#projects" className="text-gray-700 hover:text-primary-600 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+              <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+              <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+              <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="text-gray-700 hover:text-primary-600 transition-colors">Projects</a>
+              <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
           </nav>
         </div>

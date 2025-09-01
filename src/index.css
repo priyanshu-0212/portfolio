@@ -8,13 +8,16 @@
     scroll-behavior: smooth;
   }
   
+  /* Ensure smooth scrolling works on all browsers */
+  * {
+    scroll-behavior: smooth;
+  }
+  
   body {
     font-family: 'Inter', system-ui, sans-serif;
   }
   
-  * {
-    @apply border-border;
-  }
+
 }
 
 @layer components {
