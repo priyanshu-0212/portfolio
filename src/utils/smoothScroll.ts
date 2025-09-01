@@ -8,7 +8,7 @@ export const smoothScrollTo = (elementId: string) => {
   }
 };
 
-export const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, elementId: string) => {
+export const handleNavClick = (e: React.MouseEvent<HTMLElement>, elementId: string) => {
   e.preventDefault();
   smoothScrollTo(elementId);
 };

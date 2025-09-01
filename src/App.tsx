@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import AnimatedCursor from './components/AnimatedCursor';
+import HeroSection from './sections/HeroSection';
 import { handleNavClick } from './utils/smoothScroll';
 
 function App() {
@@ -25,21 +26,7 @@ function App() {
 
       <main>
         {/* Hero Section */}
-        <section id="home" className="section-padding">
-          <div className="container-custom text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-              Welcome to My
-              <span className="text-gradient block">Portfolio</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              A passionate developer creating amazing digital experiences with modern technologies
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">View My Work</button>
-              <button className="btn-secondary">Get In Touch</button>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* Placeholder sections for future development */}
         <section id="about" className="section-padding bg-white">
