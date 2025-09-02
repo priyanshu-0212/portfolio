@@ -62,14 +62,14 @@ const AboutSection: React.FC = () => {
 
   return (
     <section id="about" className="section-padding bg-white" ref={ref}>
-      <div className="container-custom">
+      <div className="container-custom max-w-5xl mx-auto">
         <motion.h2
           className="text-4xl font-bold text-gray-900 mb-12 text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          About Me
+          Hi, I’m Anshika Singh
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -82,8 +82,8 @@ const AboutSection: React.FC = () => {
           >
             <div className="flex flex-col items-center text-center">
               <motion.img
-                src="https://via.placeholder.com/150" // Replace with actual profile image
-                alt="Profile"
+                src="https://avatars.githubusercontent.com/u/anshikaxaa?v=4"
+                alt="Anshika Singh"
                 className="w-32 h-32 rounded-full mb-6 border-4 border-white shadow-lg"
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
@@ -95,7 +95,7 @@ const AboutSection: React.FC = () => {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                John Doe
+                Front-End Developer | Final Year Engineering Student
               </motion.h3>
               <motion.p
                 className="text-gray-600 leading-relaxed"
@@ -103,9 +103,23 @@ const AboutSection: React.FC = () => {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                Passionate full-stack developer with 3+ years of experience creating
-                beautiful and functional web applications. I love turning ideas into
-                reality through clean code and innovative solutions.
+                I’m a passionate front-end developer with a strong interest in building modern, responsive, and visually engaging web applications. Currently in my final year of engineering, I’ve been sharpening my skills in React.js, Tailwind CSS, JavaScript (ES6+), and TypeScript while also exploring backend technologies like Node.js and Express.
+              </motion.p>
+              <motion.p
+                className="text-gray-600 leading-relaxed mt-4"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
+                My work spans from creating interactive portfolio websites and real-time web apps to building AI-powered tools like resume analyzers and placement prediction systems. I enjoy bringing ideas to life through code, experimenting with animations, and designing experiences that feel smooth and intuitive.
+              </motion.p>
+              <motion.p
+                className="text-gray-600 leading-relaxed mt-4"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 1.2 }}
+              >
+                Beyond coding, I focus on problem-solving (LeetCode & DSA), contributing to open-source style projects, and continuously learning new technologies. My goal is to create impactful digital experiences and grow into a versatile full-stack developer.
               </motion.p>
             </div>
           </motion.div>
@@ -189,6 +203,24 @@ const AboutSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Contact & Social Links */}
+        <motion.div
+          className="mt-12 text-center space-x-6"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <a href="https://github.com/anshikaxaa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/anshikaxaa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+            LinkedIn
+          </a>
+          <a href="mailto:anshikaxaaa@gmail.com" className="text-blue-600 hover:underline">
+            Email
+          </a>
         </motion.div>
       </div>
     </section>
