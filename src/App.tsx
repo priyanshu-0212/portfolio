@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import AnimatedCursor from './components/AnimatedCursor';
 import HeroSection from './sections/HeroSection';
+import AboutSection from './sections/AboutSection';
 import { handleNavClick } from './utils/smoothScroll';
 
 function App() {
@@ -28,13 +29,8 @@ function App() {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* Placeholder sections for future development */}
-        <section id="about" className="section-padding bg-white">
-          <div className="container-custom text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">About Section</h2>
-            <p className="text-gray-600">Coming soon...</p>
-          </div>
-        </section>
+        {/* About Section */}
+        <AboutSection />
 
         <section id="projects" className="section-padding">
           <div className="container-custom text-center">
