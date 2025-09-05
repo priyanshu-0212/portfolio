@@ -3,24 +3,27 @@ import './App.css';
 import AnimatedCursor from './components/AnimatedCursor';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
+import SkillsSection from './sections/SkillsSection';
+import ProjectsSection from './sections/ProjectsSection';
+import ContactSection from './sections/ContactSection';
+import Footer from './components/Footer';
 import { handleNavClick } from './utils/smoothScroll';
 
 function App() {
   return (
-    <div className="App min-h-screen bg-gradient-primary">
+    <div className="App min-h-screen bg-black text-white transition-colors duration-500">
       <AnimatedCursor />
-      <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="container-custom">
-          <nav className="flex items-center justify-between py-4">
-            <div className="text-2xl font-bold text-gradient">
-              Portfolio
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-              <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-              <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="text-gray-700 hover:text-primary-600 transition-colors">Projects</a>
-              <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
+      <header className="bg-black sticky top-0 z-50">
+        <div className="container-custom flex items-center justify-between py-4">
+          <div className="text-2xl font-bold cursor-pointer" onClick={(e) => handleNavClick(e, 'home')}>
+            Anshika
+          </div>
+          <nav className="hidden md:flex space-x-8">
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="hover:text-pink-400 transition-colors">Home</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="hover:text-pink-400 transition-colors">About</a>
+            <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')} className="hover:text-pink-400 transition-colors">Skills</a>
+            <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-pink-400 transition-colors">Projects</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="hover:text-pink-400 transition-colors">Contact</a>
           </nav>
         </div>
       </header>
@@ -32,26 +35,18 @@ function App() {
         {/* About Section */}
         <AboutSection />
 
-        <section id="projects" className="section-padding">
-          <div className="container-custom text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Projects Section</h2>
-            <p className="text-gray-600">Coming soon...</p>
-          </div>
-        </section>
+        {/* Skills Section */}
+        <SkillsSection />
 
-        <section id="contact" className="section-padding bg-white">
-          <div className="container-custom text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Contact Section</h2>
-            <p className="text-gray-600">Coming soon...</p>
-          </div>
-        </section>
+        {/* Projects Section */}
+        <ProjectsSection />
+
+        {/* Contact Section */}
+        <ContactSection />
       </main>
 
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container-custom text-center">
-          <p>&copy; 2024 Portfolio. Built with React, Tailwind CSS, and Framer Motion.</p>
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

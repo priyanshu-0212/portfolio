@@ -1,88 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import Lottie from 'lottie-react';
 import { handleNavClick } from '../utils/smoothScroll';
-
-// Sample Lottie animation data for a floating avatar (replace with actual JSON)
-const floatingAvatarData = {
-  // Placeholder: In a real scenario, load from a JSON file or URL
-  v: '5.5.7',
-  meta: { g: 'LottieFiles AE 0.1.20' },
-  fr: 30,
-  ip: 0,
-  op: 180,
-  w: 500,
-  h: 500,
-  nm: 'Floating Avatar',
-  ddd: 0,
-  assets: [],
-  layers: [
-    // Simplified layer for demonstration
-    {
-      ddd: 0,
-      ind: 1,
-      ty: 4,
-      nm: 'Shape Layer 1',
-      sr: 1,
-      ks: {
-        o: { a: 0, k: 100, ix: 11 },
-        r: { a: 1, k: [{ i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 0, s: [0] }, { t: 180, s: [360] }] },
-        p: { a: 1, k: [{ i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 0, s: [250, 250, 0], to: [0, -50, 0], ti: [0, 50, 0] }, { t: 90, s: [250, 200, 0] }] },
-        a: { a: 0, k: [0, 0, 0], ix: 1 },
-        s: { a: 0, k: [100, 100, 100], ix: 6 }
-      },
-      ao: 0,
-      shapes: [
-        {
-          ty: 'gr',
-          it: [
-            {
-              d: 1,
-              ty: 'el',
-              s: { a: 0, k: [100, 100], ix: 2 },
-              p: { a: 0, k: [0, 0], ix: 3 }
-            },
-            {
-              ty: 'st',
-              c: { a: 0, k: [0.2, 0.4, 0.8, 1], ix: 3 },
-              o: { a: 0, k: 100, ix: 4 },
-              w: { a: 0, k: 2, ix: 5 },
-              lc: 1,
-              lj: 1,
-              ml: 4,
-              bm: 0,
-              nm: 'Stroke 1',
-              mn: 'ADBE Vector Graphic - Stroke',
-              hd: false
-            },
-            {
-              ty: 'fl',
-              c: { a: 0, k: [0.8, 0.9, 1, 1], ix: 4 },
-              o: { a: 0, k: 100, ix: 5 },
-              r: 1,
-              bm: 0,
-              nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
-              hd: false
-            }
-          ],
-          nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
-          bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
-          hd: false
-        }
-      ],
-      ip: 0,
-      op: 180,
-      st: 0,
-      bm: 0
-    }
-  ]
-};
 
 const HeroSection: React.FC = () => {
   const { scrollY } = useScroll();
@@ -91,7 +9,7 @@ const HeroSection: React.FC = () => {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
+  className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
       style={{ y }}
     >
       {/* Animated Background Waves */}
@@ -138,48 +56,36 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to My
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400">
-            <TypeAnimation
-              sequence={[
-                'Portfolio',
-                2000,
-                'World',
-                2000,
-                'Journey',
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              className="inline-block"
-            />
-          </span>
+          Hi, I'm Anshika
+        </motion.h1>
+        <motion.h2
+          className="text-3xl md:text-5xl font-semibold mb-6 text-cyan-400"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Front-End Web Developer
+        </motion.h2>
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold mb-6"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Welcome to My <span className="text-pink-500">Portfolio</span>
         </motion.h1>
 
-        {/* Subtext */}
+        {/* Subtext - very small about me */}
         <motion.p
           className="text-xl md:text-2xl text-gray-300 mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          A passionate developer creating amazing digital experiences with modern technologies
+          I love building beautiful, functional, and user-focused web experiences.
         </motion.p>
 
-        {/* Floating Avatar */}
-        <motion.div
-          className="mb-8"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <Lottie
-            animationData={floatingAvatarData}
-            loop={true}
-            className="w-32 h-32 mx-auto"
-          />
-        </motion.div>
+  {/* Removed feature blocks from Hero section as requested */}
 
         {/* Call-to-Action Buttons */}
         <motion.div
