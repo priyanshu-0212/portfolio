@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 
 const ContactSection: React.FC = () => {
@@ -25,25 +24,11 @@ const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      emailjs.send(
-        'YOUR_SERVICE_ID', // replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        'YOUR_USER_ID' // replace with your EmailJS user/public key
-      )
-      .then(() => {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitted(false), 4000);
-      })
-      .catch(() => {
-        setErrors({ form: 'Failed to send message. Please try again later.' });
-      });
+      // Formspree will handle the submission
+      (e.target as HTMLFormElement).submit();
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitted(false), 4000);
     }
   };
 
@@ -76,6 +61,7 @@ const ContactSection: React.FC = () => {
         {/* Contact Form */}
         <motion.form
           className="bg-purple-800 p-8 rounded-xl shadow-lg"
+          action="https://formspree.io/f/mwkgrwqv" method="POST"
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -94,6 +80,7 @@ const ContactSection: React.FC = () => {
               onChange={handleChange}
               aria-invalid={!!errors.name}
               aria-describedby="name-error"
+              required
             />
             {errors.name && <p id="name-error" className="text-red-500 mt-1">{errors.name}</p>}
           </div>
@@ -108,6 +95,7 @@ const ContactSection: React.FC = () => {
               onChange={handleChange}
               aria-invalid={!!errors.email}
               aria-describedby="email-error"
+              required
             />
             {errors.email && <p id="email-error" className="text-red-500 mt-1">{errors.email}</p>}
           </div>
@@ -122,6 +110,7 @@ const ContactSection: React.FC = () => {
               onChange={handleChange}
               aria-invalid={!!errors.subject}
               aria-describedby="subject-error"
+              required
             />
             {errors.subject && <p id="subject-error" className="text-red-500 mt-1">{errors.subject}</p>}
           </div>
@@ -136,6 +125,7 @@ const ContactSection: React.FC = () => {
               onChange={handleChange}
               aria-invalid={!!errors.message}
               aria-describedby="message-error"
+              required
             />
             {errors.message && <p id="message-error" className="text-red-500 mt-1">{errors.message}</p>}
           </div>
