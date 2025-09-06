@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
         {/* Contact Form */}
         <motion.form
           className="bg-purple-800 p-8 rounded-xl shadow-lg"
-          action="https://formspree.io/f/mwkgrwqv" method="POST"
+          action="https://formspree.io/f/xblaqlqb" method="POST"
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
