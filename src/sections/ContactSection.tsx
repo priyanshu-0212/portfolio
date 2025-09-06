@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 
 const ContactSection: React.FC = () => {
@@ -24,10 +25,25 @@ const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      // Simulate submission
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitted(false), 4000);
+      emailjs.send(
+        'YOUR_SERVICE_ID', // replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'YOUR_USER_ID' // replace with your EmailJS user/public key
+      )
+      .then(() => {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 4000);
+      })
+      .catch(() => {
+        setErrors({ form: 'Failed to send message. Please try again later.' });
+      });
     }
   };
 
@@ -54,7 +70,7 @@ const ContactSection: React.FC = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48c0 1.62 1.3 2.96 2.98 2.96h.04c1.68 0 2.98-1.34 2.98-2.96-.04-1.64-1.34-2.98-2.98-2.98zM2.4 8.98h5.16v12.02H2.4V8.98zM9.98 8.98h4.92v1.64h.07c.68-1.28 2.34-2.62 4.82-2.62 5.16 0 6.12 3.4 6.12 7.82v8.18h-5.16v-7.24c0-1.72-.03-3.94-2.4-3.94-2.4 0-2.76 1.86-2.76 3.78v7.4H9.98V8.98z"/></svg>
             </a>
           </div>
-  {/* Note: This form is for demo only and does not send messages. To make it work, connect to a backend or service like EmailJS. */}
+  {/* This form is now connected to EmailJS for real email sending. */}
         </motion.div>
 
         {/* Contact Form */}
