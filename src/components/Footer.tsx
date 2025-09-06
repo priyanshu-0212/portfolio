@@ -29,8 +29,8 @@ const Footer: React.FC = () => {
           <div>Chennai, India</div>
           <div className="mt-2 text-xs">© 2025 Anshika.</div>
           <div className="mt-2">Follow me:
-            <a href="https://github.com/" className="ml-2 hover:text-pink-400" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/" className="ml-2 hover:text-pink-400" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/anshikaxaa" className="ml-2 hover:text-pink-400" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/anshikaxaa/" className="ml-2 hover:text-pink-400" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>

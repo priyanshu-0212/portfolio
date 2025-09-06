@@ -74,10 +74,10 @@ const SkillsSection: React.FC = () => {
         <div className="mt-12 flex flex-col items-center">
           <h3 className="text-2xl font-semibold mb-4">Certificates</h3>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">JavaScript (HackerRank)</button>
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Machine Learning (NPTEL)</button>
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">DBMS (NPTEL)</button>
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Java (HackerRank)</button>
+            <a href="https://drive.google.com/drive/u/0/folders/1nJ0Gf7FA56kglAOQAiybBBZn333pdq5H" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">JavaScript (HackerRank)</a>
+            <a href="https://drive.google.com/drive/u/0/folders/1SfH7ah5BUosaW-57m-H21YyC23MIaHyz" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Machine Learning (NPTEL)</a>
+            <a href="https://drive.google.com/drive/u/0/folders/1dEOUt5GC5noP8Vhk5afLePSOD7CyGynQ" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">DBMS (NPTEL)</a>
+            <a href="https://drive.google.com/drive/u/0/folders/18cJ88uPGm-3XilSyPpHDGQv3WU7s_y0K" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Java (HackerRank)</a>
           </div>
         </div>
       </div>
