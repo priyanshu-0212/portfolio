@@ -2,7 +2,7 @@
 
 A beautiful, responsive personal portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion.
 
-## 🚀 Features
+##  Features
 
 - **Modern Design**: Clean, professional design with smooth animations
 - **Responsive**: Fully responsive across all devices
@@ -11,7 +11,7 @@ A beautiful, responsive personal portfolio website built with React, TypeScript,
 - **Framer Motion**: Smooth animations and transitions
 - **Component-Based**: Modular architecture for easy maintenance
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: React 18 + TypeScript
 - **Styling**: Tailwind CSS
@@ -19,7 +19,7 @@ A beautiful, responsive personal portfolio website built with React, TypeScript,
 - **Icons**: Lucide React
 - **Build Tool**: Create React App
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -32,7 +32,7 @@ src/
 └── index.css          # Global styles and Tailwind imports
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -59,14 +59,14 @@ npm start
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📝 Available Scripts
+##  Available Scripts
 
 - `npm start` - Runs the app in development mode
 - `npm run build` - Builds the app for production
 - `npm test` - Launches the test runner
 - `npm run eject` - Ejects from Create React App (not recommended)
 
-## 🎨 Customization
+##  Customization
 
 ### Colors
 The project uses a custom color palette defined in `tailwind.config.js`. You can modify the primary and dark color schemes to match your brand.
@@ -84,7 +84,7 @@ Custom animations are defined in the Tailwind config and can be extended with ad
 - **Tablet**: 640px - 1024px
 - **Desktop**: > 1024px
 
-## 🔧 Development Workflow
+##  Development Workflow
 
 This project is designed to be built section by section:
 
@@ -95,7 +95,7 @@ This project is designed to be built section by section:
 5. **Contact Section** - Contact form and information
 6. **Additional Features** - Blog, testimonials, etc.
 
-## 📦 Building for Production
+##  Building for Production
 
 ```bash
 npm run build
@@ -103,15 +103,15 @@ npm run build
 
 The build folder will contain the production-ready files.
 
-## 🌟 Contributing
+##  Contributing
 
 This is a personal portfolio project, but feel free to use it as a template for your own portfolio!
 
-## 📄 License
+##  License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
 - [Framer Motion](https://www.framer.com/motion/) for smooth animations
