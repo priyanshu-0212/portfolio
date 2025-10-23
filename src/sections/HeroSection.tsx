@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Hi, I'm Anshika
+          Hi, I'm Priyanshu
         </motion.h1>
         <motion.h2
           className="text-3xl md:text-5xl font-semibold mb-6 text-cyan-400"
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          Front-End Web Developer
+          Full-Stack | MERN Developer
         </motion.h2>
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-6"

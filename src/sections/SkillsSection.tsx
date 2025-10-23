@@ -6,15 +6,14 @@ const technicalSkills = [
   { name: 'TypeScript', value: 85 },
   { name: 'Node.js', value: 80 },
   { name: 'Python', value: 75 },
-  { name: 'UI/UX Design', value: 85 },
   { name: 'Git', value: 80 },
-  { name: 'Figma', value: 80 },
   { name: 'Tailwind CSS', value: 80 },
   { name: 'Express.js', value: 75 },
+  { name: 'MongoDB', value: 70 },
 ];
 
 const tools = [
-  'React', 'TypeScript', 'Node.js', 'Python', 'Git', 'Figma', 'Tailwind CSS', 'Express.js'
+  'React', 'TypeScript', 'Node.js', 'Python', 'Git', 'Tailwind CSS', 'Express.js', 'MongoDB',
 ];
 
 
@@ -68,16 +67,6 @@ const SkillsSection: React.FC = () => {
                 </span>
               ))}
             </div>
-          </div>
-        </div>
-        {/* Certificates Section */}
-        <div className="mt-12 flex flex-col items-center">
-          <h3 className="text-2xl font-semibold mb-4">Certificates</h3>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://drive.google.com/drive/u/0/folders/1nJ0Gf7FA56kglAOQAiybBBZn333pdq5H" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">JavaScript (HackerRank)</a>
-            <a href="https://drive.google.com/drive/u/0/folders/1SfH7ah5BUosaW-57m-H21YyC23MIaHyz" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Machine Learning (NPTEL)</a>
-            <a href="https://drive.google.com/drive/u/0/folders/1dEOUt5GC5noP8Vhk5afLePSOD7CyGynQ" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">DBMS (NPTEL)</a>
-            <a href="https://drive.google.com/drive/u/0/folders/18cJ88uPGm-3XilSyPpHDGQv3WU7s_y0K" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full shadow hover:scale-105 transition">Java (HackerRank)</a>
           </div>
         </div>
       </div>

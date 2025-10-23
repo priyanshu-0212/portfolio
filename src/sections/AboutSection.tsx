@@ -28,7 +28,7 @@ const AboutSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          I am a passionate front-end developer with a strong focus on building modern, performant, and user-centric web applications. I enjoy transforming ideas into beautiful, intuitive digital experiences and thrive on solving complex problems with clean, creative solutions.
+          I’m a final-year B.Tech student from Lovely Professional University with a strong passion for building scalable, user-friendly web applications. I specialize in front-end and full-stack development using HTML, CSS, JavaScript, React, Node.js, and databases. I enjoy solving complex problems and transforming creative ideas into functional, efficient code.
         </motion.p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">

@@ -16,7 +16,7 @@ function App() {
       <header className="bg-black sticky top-0 z-50">
         <div className="container-custom flex items-center justify-between py-4">
           <div className="text-2xl font-bold cursor-pointer" onClick={(e) => handleNavClick(e, 'home')}>
-            Anshika
+            Priyanshu 
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="hover:text-pink-400 transition-colors">Home</a>

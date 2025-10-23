@@ -3,27 +3,27 @@ import { motion } from 'framer-motion';
 
 const timelineData = [
   {
-    title: 'SRM Institute of Science & Technology',
+    title: 'Lovely Professional University',
     period: '2022–2026',
-    description: 'B.Tech CSE (CGPA: 9.18)',
+    description: 'B.Tech CSE (CGPA: 7.17)',
   },
   {
-    title: 'Seth M.R. Jaipuria School',
+    title: 'Happy Model School',
     period: '2019–2021',
-    description: 'Intermediate (76%)',
+    description: 'Intermediate (69.2%)',
   },
   {
-    title: 'Vanita Public School',
+    title: 'Happy Model School',
     period: '2018–2019',
-    description: 'Matriculation (76%)',
+    description: 'Matriculation (73.4%)',
   },
 ];
 
 const certificates = [
-  'JavaScript (HackerRank)',
-  'Machine Learning (NPTEL)',
-  'DBMS (NPTEL)',
-  'Java (HackerRank)',
+  'Data Structures & Algorithms (Board Infinity)',
+  'Server-Side Scripting with Node.js (Coursera)',
+  'Generative AI with LLM (Coursera)',
+  'Front-End Web Development (LinkedIn Learning)',
 ];
 
 const ExperienceSection: React.FC = () => {
